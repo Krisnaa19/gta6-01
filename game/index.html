@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLMAR — Open World</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<div id="hud" style="display:none">
+  <div id="money">$250</div>
+  <div id="objective">
+    <div id="obj-title"></div>
+    <div id="obj-text"></div>
+    <div id="obj-dist"></div>
+  </div>
+  <div id="stars"></div>
+  <div id="health"><div id="health-fill"></div></div>
+  <div id="speed-box"><span id="speed">0</span><span id="speed-unit">km/h</span></div>
+  <canvas id="minimap" width="200" height="200"></canvas>
+  <div id="dialogue"><div id="dlg-who"></div><div id="dlg-text"></div></div>
+  <div id="banner"><div id="banner-title"></div><div id="banner-sub"></div></div>
+  <div id="toast"></div>
+  <div id="hint">WASD move &nbsp;·&nbsp; E enter / exit car &nbsp;·&nbsp; F punch &nbsp;·&nbsp; Shift run &nbsp;·&nbsp; Space jump / handbrake &nbsp;·&nbsp; drag mouse to look &nbsp;·&nbsp; P pause</div>
+</div>
+
+<div id="start-screen">
+  <div class="panel">
+    <h1>SOLMAR</h1>
+    <p class="tag">Sun, sea and second chances.</p>
+    <p class="story">Dario drives for hire in Solmar, a bright city on the coast where every
+    fare pays and every shortcut has a price. Four jobs stand between him and a
+    clean slate — if the Solmar PD lets him finish them.</p>
+    <div class="controls">
+      <div><b>W A S D</b><span>Move / drive</span></div>
+      <div><b>Mouse drag</b><span>Look around</span></div>
+      <div><b>E</b><span>Enter / exit car</span></div>
+      <div><b>F</b><span>Punch</span></div>
+      <div><b>Shift</b><span>Run</span></div>
+      <div><b>Space</b><span>Jump / handbrake</span></div>
+      <div><b>P</b><span>Pause</span></div>
+      <div><b>M</b><span>Mute sound</span></div>
+    </div>
+    <button id="btn-start">Start Engine</button>
+    <button id="btn-continue">Continue</button>
+    <p class="foot">An original open-world game. Keyboard + mouse. Your progress saves on this device.</p>
+  </div>
+</div>
+
+<div id="pause-screen" style="display:none">
+  <div class="panel">
+    <h2>Paused</h2>
+    <button id="btn-resume">Resume</button>
+    <button id="btn-mute">Sound: On</button>
+    <button id="btn-quit">Save &amp; Quit to Menu</button>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
