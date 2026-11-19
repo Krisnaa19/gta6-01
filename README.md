@@ -6,6 +6,12 @@
 
 SOLMAR is an open-world 3D crime game in the spirit of GTA 6, built with three.js: a procedural coastal city to explore on foot and by car, a 0–5 star wanted system with police chases, and four story missions — from your first fare to the Solmar Heist. Traffic, pedestrians, a minimap, HUD, save games and procedural WebAudio sound are all included, with zero network requests.
 
+## Controls
+
+- WASD — move, Mouse — look
+- Shift — run, Space — jump
+- E — enter/exit car, F — punch
+
 ## Run it
 
 ```sh
